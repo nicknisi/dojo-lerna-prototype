@@ -16,3 +16,4 @@ coverage-final.lcov
 coverage-unmapped.json
 /_build
 /_apidoc
+lerna-debug.log

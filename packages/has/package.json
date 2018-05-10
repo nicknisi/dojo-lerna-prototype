@@ -17,6 +17,8 @@
     "url": "https://github.com/dojo/has.git"
   },
   "scripts": {
+    "dev": "grunt dev",
+    "dist": "grunt dist",
     "precommit": "lint-staged",
     "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
     "test": "grunt test"
@@ -43,13 +45,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 4,
-    "useTabs": true,
-    "parser": "typescript",
-    "printWidth": 120,
-    "arrowParens": "always"
   }
 }

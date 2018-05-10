@@ -17,6 +17,8 @@
     "url": "https://github.com/dojo/shim.git"
   },
   "scripts": {
+    "dev": "grunt dev",
+    "dist": "grunt dist",
     "prepublish": "grunt peerDepInstall",
     "precommit": "lint-staged",
     "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
