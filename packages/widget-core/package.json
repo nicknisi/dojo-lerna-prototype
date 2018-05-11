@@ -66,6 +66,7 @@
     "typescript": "~2.6.1"
   },
   "dependencies": {
+    "@dojo/has": "^2.0.1-pre",
     "@types/web-animations-js": "2.2.5",
     "tslib": "~1.8.1"
   },
