@@ -17,6 +17,7 @@
     "url": "https://github.com/dojo/has.git"
   },
   "scripts": {
+    "clean": "grunt clean",
     "dev": "grunt dev",
     "dist": "grunt dist",
     "precommit": "lint-staged",
@@ -35,7 +36,6 @@
     "husky": "0.14.3",
     "intern": "~4.1.0",
     "lint-staged": "6.0.0",
-    "prettier": "1.9.2",
     "sinon": "^1.17.4",
     "tslint": "5.8.0",
     "typescript": "~2.6.1"

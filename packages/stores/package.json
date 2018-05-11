@@ -12,6 +12,9 @@
   },
   "license": "BSD-3-Clause",
   "scripts": {
+    "clean": "grunt clean",
+    "dev": "grunt dev",
+    "dist": "grunt dist",
     "prepublish": "grunt peerDepInstall",
     "precommit": "lint-staged",
     "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
@@ -37,7 +40,6 @@
     "husky": "0.14.3",
     "intern": "~4.1.0",
     "lint-staged": "6.0.0",
-    "prettier": "1.9.2",
     "sinon": "^1.17.6",
     "tslint": "5.8.0",
     "typescript": "~2.6.1"
@@ -50,13 +52,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 4,
-    "useTabs": true,
-    "parser": "typescript",
-    "printWidth": 120,
-    "arrowParens": "always"
   }
 }

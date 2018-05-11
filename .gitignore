@@ -14,6 +14,6 @@ tests/typings/dist/
 html-report
 coverage-final.lcov
 coverage-unmapped.json
-/_build
-/_apidoc
+packages/*/_build
+packages/*/typings
 lerna-debug.log

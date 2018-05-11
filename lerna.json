@@ -1,7 +1,15 @@
 {
-  "lerna": "2.9.0",
-  "packages": [
-    "packages/*"
-  ],
-  "version": "2.0.0"
+	"lerna": "2.9.0",
+	"command": {
+		"publish": {
+			"ignoreChanges": [
+				"ignored-file",
+				"*.md"
+			]
+		}
+	},
+	"packages": [
+		"packages/*"
+	],
+	"version": "2.0.0"
 }
