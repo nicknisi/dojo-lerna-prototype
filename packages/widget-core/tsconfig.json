@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"declaration": false,
 		"emitDecoratorMetadata": true,
 		"jsx": "react",
 		"jsxFactory": "tsx",

@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@dojo/has": "^2.0.1-pre",
+    "@dojo/widget-core": "^2.0.1-pre",
     "tslib": "~1.8.1"
   },
   "lint-staged": {

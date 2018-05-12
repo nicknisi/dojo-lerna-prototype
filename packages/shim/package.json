@@ -30,12 +30,20 @@
   "devDependencies": {
     "@dojo/loader": "^2.0.0",
     "@types/glob": "~5.0.0",
+    "@types/grunt": "~0.4.0",
     "@types/node": "~9.6.5",
+    "grunt": "~1.0.1",
+    "grunt-dojo2": "latest",
+    "grunt-tslint": "5.0.1",
+    "husky": "0.14.3",
     "intern": "~4.1.0",
+    "lint-staged": "6.0.0",
+    "prettier": "1.9.2",
+    "tslint": "5.8.0",
     "typescript": "~2.6.1"
   },
   "dependencies": {
-    "@dojo/has": "^2.0.1-pre",
+    "@dojo/widget-core": "^2.0.1-pre",
     "intersection-observer": "0.4.2",
     "pepjs": "0.4.2",
     "tslib": "~1.8.0",
