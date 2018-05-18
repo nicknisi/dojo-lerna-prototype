@@ -10,11 +10,16 @@ const argv: any = yargs.option({
 		boolean: true,
 		describe: 'do not publish to NPM or push git'
 	},
+	'skip-test': {
+		boolean: true,
+		describe: 'skip running tests as part of the release'
+	},
 	'release-version': {
 		string: true,
 		describe: 'release version'
 	}
 }).argv;
+const baseBranch = 'master';
 
 interface runAsPromise {
 	(command: string, args: string[], options: any): Promise<any>;
@@ -27,12 +32,14 @@ interface Updated {
 }
 
 async function publish() {
-	const updatedPackages: Updated = JSON.parse(await runAsPromise(lernaBin, [ 'updated', '--json']));
+	const updatedPackages: Updated[] = JSON.parse(await runAsPromise(lernaBin, [ 'updated', '--json']));
 	await lernaPublish();
 
-	for (let updatedPackage in updatedPackages) {
-		await publishToNpm(updatedPackage);
-	}
+	await build();
+	await publishToNpm();
+	await updateWorkingVersion();
+	await pushGit();
+	console.log(updatedPackages);
 }
 
 function lernaPublish() {
@@ -45,13 +52,25 @@ function lernaPublish() {
 	});
 }
 
-async function publishToNpm(packageName: string) {
-	await runAsPromise(lernaBin, [ 'test' ])
-	// TODO clean package
-	// TODO build package
-	// TODO test package
+async function build() {
+	await runAsPromise(lernaBin, [ 'run', 'clean', '--since', baseBranch]);
+	if (!argv.skipTest) {
+		await runAsPromise(lernaBin, [ 'run', 'test', '--since', baseBranch]);
+	}
+	await runAsPromise(lernaBin, [ 'run', 'dist', '--since', baseBranch]);
+}
+
+async function publishToNpm() {
 	// TODO publish package
-	// TODO update package.json to x.x.x-pre,
+}
+
+async function updateWorkingVersion() {
+	if (baseBranch === 'master') {
+		// TODO update package.json to x.x.(x+1)-pre,
+	}
+}
+
+async function pushGit() {
 	// TODO commit this change
 	// TODO git push && git push --tags
 }
