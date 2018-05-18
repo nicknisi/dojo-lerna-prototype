@@ -22,16 +22,18 @@
     "url": "https://github.com/dojo/routing.git"
   },
   "scripts": {
+    "clean": "grunt clean",
+    "dev": "grunt dev",
+    "dist": "grunt dist",
     "prepublish": "grunt peerDepInstall",
-    "precommit": "lint-staged",
     "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts' 'examples/**/*.ts'",
     "test": "grunt test"
   },
   "peerDependencies": {
     "@dojo/core": "^2.0.0",
     "@dojo/has": "^2.0.0",
-    "@dojo/shim": "^2.0.0",
     "@dojo/i18n": "^2.0.0",
+    "@dojo/shim": "^2.0.0",
     "@dojo/widget-core": "^2.0.0"
   },
   "devDependencies": {
@@ -52,20 +54,8 @@
     "typescript": "~2.6.1"
   },
   "dependencies": {
+    "@dojo/has": "^2.0.1-pre",
+    "@dojo/widget-core": "^2.0.1-pre",
     "tslib": "~1.8.1"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 4,
-    "useTabs": true,
-    "parser": "typescript",
-    "printWidth": 120,
-    "arrowParens": "always"
   }
 }

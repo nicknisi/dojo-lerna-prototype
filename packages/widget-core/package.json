@@ -21,6 +21,9 @@
   },
   "scripts": {
     "benchmark": "./run-benchmark.sh",
+    "clean": "grunt clean",
+    "dev": "grunt dev",
+    "dist": "grunt dist",
     "prepublish": "grunt peerDepInstall",
     "precommit": "lint-staged",
     "prettier": "prettier --write 'src/**/*.ts*' 'tests/**/*.ts*'",
@@ -55,7 +58,6 @@
     "jsdom": "^9.5.0",
     "jstat": "^1.7.1",
     "lint-staged": "6.0.0",
-    "prettier": "1.9.2",
     "ramda": "^0.25.0",
     "selenium-webdriver": "3.6.0",
     "serve": "^6.4.1",
@@ -64,6 +66,7 @@
     "typescript": "~2.6.1"
   },
   "dependencies": {
+    "@dojo/has": "^2.0.1-pre",
     "@types/web-animations-js": "2.2.5",
     "tslib": "~1.8.1"
   },
@@ -72,13 +75,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 4,
-    "useTabs": true,
-    "parser": "typescript",
-    "printWidth": 120,
-    "arrowParens": "always"
   }
 }

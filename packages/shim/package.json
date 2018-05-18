@@ -17,8 +17,10 @@
     "url": "https://github.com/dojo/shim.git"
   },
   "scripts": {
+    "clean": "grunt clean",
+    "dev": "grunt dev",
+    "dist": "grunt dist",
     "prepublish": "grunt peerDepInstall",
-    "precommit": "lint-staged",
     "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
     "test": "grunt test"
   },
@@ -41,23 +43,10 @@
     "typescript": "~2.6.1"
   },
   "dependencies": {
+    "@dojo/widget-core": "^2.0.1-pre",
     "intersection-observer": "0.4.2",
     "pepjs": "0.4.2",
     "tslib": "~1.8.0",
     "web-animations-js": "2.3.1"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 4,
-    "useTabs": true,
-    "parser": "typescript",
-    "printWidth": 120,
-    "arrowParens": "always"
   }
 }

@@ -7,22 +7,26 @@
   },
   "homepage": "https://dojo.io",
   "bugs": {
-    "url": "https://github.com/dojo/core/issues"
+    "url": "https://github.com/dojo/framework/issues"
   },
   "license": "BSD-3-Clause",
   "private": true,
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dojo/core.git"
+    "url": "https://github.com/dojo/framework.git"
   },
   "scripts": {
+    "clean": "grunt clean",
+    "dev": "grunt dev",
+    "dist": "grunt dist",
     "prepublish": "grunt peerDepInstall",
-    "precommit": "lint-staged",
     "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
     "test": "grunt test"
   },
   "dependencies": {
+    "@dojo/has": "^2.0.1-pre",
+    "@dojo/widget-core": "^2.0.1-pre",
     "tslib": "~1.8.1"
   },
   "peerDependencies": {
@@ -60,19 +64,5 @@
     "sinon": "~1.17.6",
     "tslint": "5.8.0",
     "typescript": "~2.6.1"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 4,
-    "useTabs": true,
-    "parser": "typescript",
-    "printWidth": 120,
-    "arrowParens": "always"
   }
 }
