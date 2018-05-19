@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "lerna dev",
     "precommit": "lint-staged",
-    "pub": "ts-node ./support/publish",
+    "pub": "ts-node ./support/cli/publish",
     "test": "lerna test",
     "test-changes": "lerna run test --since master"
   },
