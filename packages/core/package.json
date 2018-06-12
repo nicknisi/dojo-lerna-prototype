@@ -20,13 +20,15 @@
     "clean": "grunt clean",
     "dev": "grunt dev",
     "dist": "grunt dist",
+    "doc": "grunt doc",
     "prepublish": "grunt peerDepInstall",
     "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
-    "test": "grunt test"
+    "test": "grunt test",
+    "test:browserstack": "grunt intern:browserstack --test-reporter",
+    "test:bs": "intern config=intern.json@browserstack",
+    "uploadCoverage": "grunt uploadCoverage"
   },
   "dependencies": {
-    "@dojo/has": "^2.0.1-pre",
-    "@dojo/widget-core": "^2.0.1-pre",
     "tslib": "~1.8.1"
   },
   "peerDependencies": {
@@ -34,7 +36,9 @@
     "@dojo/shim": "^2.0.0"
   },
   "devDependencies": {
+    "@dojo/has": "^2.0.0",
     "@dojo/loader": "^2.0.0",
+    "@dojo/shim": "^2.0.0",
     "@theintern/leadfoot": "~2.0.2",
     "@types/benchmark": "~1.0.0",
     "@types/chai": "~4.0.0",

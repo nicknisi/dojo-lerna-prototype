@@ -1,5 +1,7 @@
 # Dojo Framework
 
+![](https://travis-ci.com/nicknisi/dojo.svg?branch=master)
+
 ## Quickstart
 
 ### Build the world

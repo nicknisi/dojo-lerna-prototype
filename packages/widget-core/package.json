@@ -24,10 +24,13 @@
     "clean": "grunt clean",
     "dev": "grunt dev",
     "dist": "grunt dist",
+    "doc": "grunt doc",
     "prepublish": "grunt peerDepInstall",
     "precommit": "lint-staged",
     "prettier": "prettier --write 'src/**/*.ts*' 'tests/**/*.ts*'",
-    "test": "grunt test"
+    "test": "grunt test",
+    "test:browserstack": "grunt intern:browserstack --test-reporter",
+    "uploadCoverage": "grunt uploadCoverage"
   },
   "peerDependencies": {
     "@dojo/core": "^2.0.0",
@@ -36,12 +39,16 @@
     "@dojo/shim": "^2.0.0"
   },
   "devDependencies": {
+    "@dojo/core": "^2.0.0",
+    "@dojo/has": "^2.0.0",
+    "@dojo/i18n": "^2.0.0",
     "@dojo/loader": "^2.0.0",
+    "@dojo/shim": "^2.0.0",
     "@types/glob": "5.0.*",
     "@types/grunt": "0.4.*",
     "@types/jsdom": "2.0.*",
     "@types/node": "~9.6.5",
-    "@types/ramda": "^0.25.5",
+    "@types/ramda": "0.25.0",
     "@types/selenium-webdriver": "^3.0.8",
     "@types/sinon": "~4.1.2",
     "@types/yargs": "^8.0.2",
@@ -58,7 +65,7 @@
     "jsdom": "^9.5.0",
     "jstat": "^1.7.1",
     "lint-staged": "6.0.0",
-    "ramda": "^0.25.0",
+    "ramda": "0.25.0",
     "selenium-webdriver": "3.6.0",
     "serve": "^6.4.1",
     "sinon": "~4.1.3",
