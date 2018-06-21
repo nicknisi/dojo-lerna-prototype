@@ -20,8 +20,11 @@
     "clean": "grunt clean",
     "dev": "grunt dev",
     "dist": "grunt dist",
+    "doc": "grunt doc",
     "prettier": "prettier --write 'src/**/*.ts' 'tests/**/*.ts'",
-    "test": "grunt test"
+    "test": "grunt test",
+    "test:browserstack": "grunt intern:browserstack --test-reporter",
+    "uploadCoverage": "grunt uploadCoverage"
   },
   "devDependencies": {
     "@dojo/loader": "^2.0.0",
@@ -40,7 +43,5 @@
     "tslint": "5.8.0",
     "typescript": "~2.6.1"
   },
-  "dependencies": {
-    "@dojo/widget-core": "^2.0.1-pre"
-  }
+  "dependencies": {}
 }

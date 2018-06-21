@@ -11,11 +11,17 @@
     "url": "https://github.com/dojo/framework.git"
   },
   "scripts": {
-    "dev": "lerna dev",
+    "clean": "lerna run clean",
+    "dev": "lerna run dev",
+    "dist": "lerna run dist",
+    "doc": "lerna run doc",
     "precommit": "lint-staged",
     "pub": "ts-node ./support/cli/publish",
-    "test": "lerna test",
-    "test-changes": "lerna run test --since master"
+    "test": "lerna run test",
+    "test-changes": "lerna run test --since master",
+    "test:browserstack": "lerna run test:browserstack --concurrency 1",
+    "postinstall": "lerna bootstrap",
+    "uploadCoverage": "lerna run uploadCoverage"
   },
   "devDependencies": {
     "@dojo/scripts": "^0.1.1",

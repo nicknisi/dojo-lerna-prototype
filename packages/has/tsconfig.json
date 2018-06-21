@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
-		"outDir": "_build/"
+		"outDir": "_build/",
+		"importHelpers": false
 	},
 	"extends": "../../tsconfig.json",
 	"include": [
