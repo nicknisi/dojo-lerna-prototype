@@ -2,8 +2,10 @@
   "name": "@dojo/widget-core",
   "version": "2.0.1-pre",
   "description": "A core widget library for Dojo 2",
-  "private": true,
   "homepage": "https://dojo.io",
+  "files": [
+    "_build/src"
+  ],
   "bugs": {
     "url": "https://github.com/dojo/widget-core/issues"
   },
@@ -33,13 +35,13 @@
     "uploadCoverage": "grunt uploadCoverage"
   },
   "peerDependencies": {
-    "@dojo/core": "^2.0.0",
+    "@dojo/core": "^2.0.1-pre",
     "@dojo/has": "^2.0.0",
     "@dojo/i18n": "^2.0.0",
     "@dojo/shim": "^2.0.0"
   },
   "devDependencies": {
-    "@dojo/core": "^2.0.0",
+    "@dojo/core": "^2.0.1-pre",
     "@dojo/has": "^2.0.0",
     "@dojo/i18n": "^2.0.0",
     "@dojo/loader": "^2.0.0",

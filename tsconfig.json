@@ -12,6 +12,15 @@
 			"es2015.symbol",
 			"es2015.symbol.wellknown"
 		],
+		"paths": {
+			"@dojo/core/*": ["./core/_build/src/*"],
+			"@dojo/has/*": ["./has/_build/src/*"],
+			"@dojo/i18n/*": ["./i18n/_build/src/*"],
+			"@dojo/routing/*": ["./routing/_build/src/*"],
+			"@dojo/shim/*": ["./shim/_build/src/*"],
+			"@dojo/stores/*": ["./stores/_build/src/*"],
+			"@dojo/widget-core/*": ["./widget-core/_build/src/*"]
+		},
 		"module": "umd",
 		"moduleResolution": "node",
 		"noUnusedLocals": true,

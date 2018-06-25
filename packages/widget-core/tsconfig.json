@@ -5,7 +5,11 @@
 		"jsx": "react",
 		"jsxFactory": "tsx",
 		"outDir": "_build/",
-		"types": [ "intern", "web-animations-js" ]
+		"types": [ "intern", "web-animations-js" ],
+		"baseUrl": ".",
+		"paths": {
+			"@dojo/core": [ "../core/_build/src" ]
+		}
 	},
 	"extends": "../../tsconfig.json",
 	"include": [

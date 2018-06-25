@@ -1,7 +1,7 @@
 import Map from '@dojo/shim/Map';
 import WeakMap from '@dojo/shim/WeakMap';
 import Symbol from '@dojo/shim/Symbol';
-import { Handle } from '@dojo/core/interfaces';
+import { Handle, NickNisi } from '@dojo/core/interfaces';
 import { v } from './d';
 import { auto } from './diff';
 import {
@@ -21,6 +21,12 @@ import RegistryHandler from './RegistryHandler';
 import NodeHandler from './NodeHandler';
 import { widgetInstanceMap } from './vdom';
 import { isWidgetBaseConstructor, WIDGET_BASE_TYPE } from './Registry';
+
+const foo: NickNisi = {
+	working: true
+}
+
+console.log(foo);
 
 interface ReactionFunctionArguments {
 	previousProperties: any;

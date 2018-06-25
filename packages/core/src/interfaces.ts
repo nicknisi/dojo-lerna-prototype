@@ -1,5 +1,9 @@
 export type EventType = string | symbol;
 
+export interface NickNisi {
+	working: boolean;
+}
+
 /**
  * The base event object, which provides a `type` property
  */

@@ -10,8 +10,10 @@
     "url": "https://github.com/dojo/framework/issues"
   },
   "license": "BSD-3-Clause",
-  "private": true,
-  "main": "main.js",
+  "main": "_build/src/main.js",
+  "files": [
+    "_build/src"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/dojo/framework.git"
